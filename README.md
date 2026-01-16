@@ -22,9 +22,9 @@ A Django REST API that fetches real-time job listings from the [Adzuna Job Searc
    ```bash
    git clone https://github.com/mcrolins/job-finder-API.git
    cd job-finder-API
-
+```
 2.Create virtual environment 
- ``` python -m venv venv
+  python -m venv venv
   source venv/bin/activate  # Linux/Mac
   # venv\Scripts\activate  # Windows
 
