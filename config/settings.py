@@ -22,12 +22,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-jva1pb7b4wxk%gaqs2sd*)i(u*x2&0@$-j8ta=lgu5y-g)urm6'
-
+# ✅ One clean line
+SECRET_KEY = config('SECRET_KEY', default='django-insecure-jva1pb7b4wxk%gaqs2sd*)i(u*x2&0@$-j8ta=lgu5y-g)urm6')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'job-finder-api-tke5.onrender.com',
+    'localhost',
+    '127.0.0.1'
+]
 
 
 # Application definition
@@ -57,7 +61,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = ["http://localhost:3000"]  # React dev server
+CORS_ALLOWED_ORIGINS = [
+    "https://job-finder-frontend-three.vercel.app/"
+    "http://localhost:3000"]  # React dev server
 
 
 ROOT_URLCONF = 'config.urls'
@@ -130,3 +136,4 @@ STATIC_URL = 'static/'
 # This will read from .env in the same directory as manage.py
 ADZUNA_APP_ID = config('ADZUNA_APP_ID')
 ADZUNA_APP_KEY = config('ADZUNA_APP_KEY')
+SECRET_KEY = config('SECRET_KEY')
