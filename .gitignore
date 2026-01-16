@@ -1,2 +1,18 @@
+
+# Virtual env
 jsenv/
+
+# Database
+db.sqlite3
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE
+.vscode/
+.idea/
+
+# Env files (sensitive information)
 .env
