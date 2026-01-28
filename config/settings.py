@@ -62,7 +62,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "https://job-finder-frontend-three.vercel.app/"
+    "https://job-finder-frontend-ndlrhggx5-mcrolins-projects.vercel.app/",
     "http://localhost:3000"]  # React dev server
 
 
